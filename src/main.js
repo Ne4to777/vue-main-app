@@ -1,12 +1,16 @@
-import Vue from 'vue'
+import VueApp from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import SPXPlugin from './plugins/spx'
 
-Vue.config.productionTip = false
+VueApp.config.productionTip = false
 
-new Vue({
+Vue.use(SPXPlugin);
+VueApp.use(SPXPlugin);
+
+new VueApp({
 	router,
 	store,
 	render: h => h(App)
-}).$mount('#main-app')
+}).$mount('#app')

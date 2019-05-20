@@ -9,8 +9,6 @@
 // @ is an alias to /src
 import Test from '@/components/Test.vue'
 
-import spx from 'spx-com'
-
 export default {
 	name: 'home',
 	components: {
@@ -29,11 +27,9 @@ export default {
 		}
 	},
 	async created() {
-		// console.log(this.$store)
-
-		this.time = await spx.time.getCurrent()
-		this.user = await spx.user.get()
-		this.items = await spx('test/spx')
+		this.time = await this.$spx.time.getCurrent()
+		this.user = await this.$spx.user.get()
+		this.items = await this.$spx('test/spx')
 			.list('Test')
 			.item()
 			.get()
