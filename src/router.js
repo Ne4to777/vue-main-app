@@ -1,14 +1,19 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+/* eslint-disable no-restricted-globals */
+import userInfo from '../dev/private.json'
 import Home from './views/Home.vue'
+import About from './views/About.vue'
 
-Vue.use(Router)
-export default new Router({
-	routes: [
-		{
-			path: '/',
-			name: 'home',
-			component: Home
-		}
-	]
+export default new VueRouter({
+	base: userInfo.siteRelativePath,
+	mode: history.pushState ? 'history' : 'hash',
+	routes: [{
+		path: '/index.aspx',
+		alias: '/',
+		name: 'home',
+		component: Home
+	}, {
+		path: '/about/index.aspx',
+		name: 'about',
+		component: About
+	}]
 })
