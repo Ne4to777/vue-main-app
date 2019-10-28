@@ -1,5 +1,5 @@
 <template>
-	<master-app>
+	<master-app id="app">
 		<div id="nav">
 			<router-link to="/index.aspx">Home</router-link>|
 			<router-link to="/about/index.aspx">About</router-link>

@@ -2,10 +2,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-const app = new Vue({
+new Vue({
 	router,
 	store,
 	render: h => h(App)
-})
-
-app.$mount('#main-app')
+}).$mount('#main-app')
