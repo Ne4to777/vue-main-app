@@ -1,5 +1,5 @@
 <template>
-	<master-app id="app">
+	<master-app>
 		<div id="nav">
 			<router-link to="/index.aspx">Home</router-link>|
 			<router-link to="/about/index.aspx">About</router-link>
@@ -9,18 +9,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-
-Component.registerHooks(['created', 'beforeUpdate'])
-
-@Component({
-	name: 'MainApp'
-})
-export default class MainApp extends Vue {
-	x = true
-
+export default {
 	created(): void {
-		console.log('1', this.x)
+		console.log('1')
 	}
 }
 </script>

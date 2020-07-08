@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 const isMongo = process.env.BACKEND_MODE === 'mongo'
 
 let externals = {}
-let optimization = {}
+let optimization = { splitChunks: false }
 let templateParameters = {
 	BASE_URL: '@/'
 }
