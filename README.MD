@@ -1,8 +1,9 @@
-# vue main app
+# aura-master-app
 
 ## Project setup
 ```
-npm install
+npm i
+npm run sweeper-fix
 ```
 
 ### Compiles and hot-reloads for development
@@ -15,19 +16,19 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+### Run your unit tests
 ```
-npm run test
+npm run test:unit
+```
+
+### Run your end-to-end tests
+```
+npm run test:e2e
 ```
 
 ### Lints and fixes files
 ```
 npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
 ```
 
 ### Customize configuration

@@ -1,8 +1,10 @@
+  
 <template>
 	<not-found />
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 export default {}
 </script>
 
