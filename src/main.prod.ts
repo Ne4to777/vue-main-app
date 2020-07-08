@@ -5,24 +5,16 @@ import './assets/styles/global.styl'
 
 import App from './App.vue'
 import store from './store'
-import polyfillsPlugin from './plugins/polyfills'
-import spxPlugin from './plugins/spx'
-import initDataSPPlugin from './plugins/initDataSP'
 
 declare const Vue: any
 declare const VueRouter: any
 
 Vue.config.productionTip = false
 
-Vue.use(polyfillsPlugin)
-Vue.use(spxPlugin)
 Vue.use(store)
 Vue.use(VueRouter)
-Vue.use(initDataSPPlugin)
-
-// Vue.component('master-app', App)
 
 new Vue({
 	store,
 	render: (h: any) => h(App)
-}).$mount('#master-app')
+}).$mount('#app')

@@ -53,7 +53,7 @@ if (isMongo) {
 
 const devServer = {
 	contentBase: './public',
-	port: 3001,
+	port: 3000,
 	proxy: 'http://localhost:8080',
 	before: startProxy
 }

@@ -10,9 +10,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { namespace } from 'vuex-class'
-
-const masterModule = namespace('master')
 
 Component.registerHooks(['created', 'beforeUpdate'])
 
@@ -20,12 +17,12 @@ Component.registerHooks(['created', 'beforeUpdate'])
 	name: 'MainApp'
 })
 export default class MainApp extends Vue {
-	async created(): Promise<void> {
-		console.log(1)
+	x = true
+
+	created(): void {
+		console.log('1', this.x)
 	}
 }
 </script>
 
-<style lang="stylus">
-@import '~@/assets/styles/variables.styl'
-</style>
+<style lang="stylus"></style>
