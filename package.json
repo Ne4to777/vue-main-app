@@ -24,6 +24,7 @@
 		"core-js": "latest",
 		"vue": "^2.6.11",
 		"vue-property-decorator": "^8.4.1",
+		"vue-router": "^3.3.4",
 		"vuex": "^3.5.1",
 		"vuex-class": "^0.3.2"
 	},

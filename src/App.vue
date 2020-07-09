@@ -12,6 +12,14 @@
 export default {
 	created(): void {
 		console.log('1')
+		const delay = 2000
+		setTimeout(() => {
+			console.log(this.$store)
+
+			this.$store.dispatch('master/setSidebarProps', {
+				isVertical: false
+			})
+		}, delay)
 	}
 }
 </script>

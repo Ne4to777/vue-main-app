@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 const isMongo = process.env.BACKEND_MODE === 'mongo'
 
 let externals = {}
-let optimization = { splitChunks: false }
+const optimization = { splitChunks: false }
 let templateParameters = {
 	BASE_URL: '@/'
 }
@@ -24,11 +24,6 @@ if (isProduction) {
 		vue: 'Vue',
 		'vue-router': 'VueRouter',
 		vuex: 'Vuex'
-	}
-	optimization = {
-		splitChunks: {
-			chunks: 'all'
-		}
 	}
 	templateParameters = {
 		BASE_URL: privateJSON.siteUrl

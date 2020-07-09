@@ -2,7 +2,7 @@
 	"siteUrl": "http://aura.dme.aero.corp",
 	"strategy": "OnpremiseUserCredentials",
 	"domain": "dme",
-	"siteRelativePath": "vue",
+	"siteRelativePath": "apps/vue",
 	"siteDisk": "A://",
 	"deployPath": "Assets",
 	"userID": "10842",

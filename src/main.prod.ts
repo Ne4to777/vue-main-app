@@ -1,14 +1,11 @@
-import App from './App.vue'
-import store from './store'
+import App from '@/App.vue'
+import router from '@/router/index'
 
 declare const Vue: any
-declare const VueRouter: any
 
 Vue.config.productionTip = false
 
-Vue.use(VueRouter)
-
 new Vue({
-	store,
+	router,
 	render: (h: any) => h(App)
 }).$mount('#app')
