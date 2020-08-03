@@ -1,0 +1,11 @@
+{
+	"siteUrl": "http://aura.dme.aero.corp",
+	"strategy": "OnpremiseUserCredentials",
+	"domain": "dme",
+	"siteRelativePath": "apps/vue",
+	"siteDisk": "A://",
+	"deployPath": "Assets",
+	"userID": "10842",
+	"username": "asalekseev",
+	"password": "6028398cdb47d57470e58ee014f1f8f841d2cbba64a03981c53a4938be4e66a7aa1f407e34f46876c6b88ea525455790hPi/V8cdiCA+PlUfelpwsg=="
+}

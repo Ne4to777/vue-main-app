@@ -1,10 +1,10 @@
 const robocopy = require('robocopy')
 const path = require('path')
-const config = require('./private.json')
+const { siteDisk, siteRelativePath, deployPath } = require('./private.json')
 
 robocopy({
 	source: './dist',
-	destination: path.join(config.siteDisk, config.siteRelativePath, config.deployPath),
+	destination: path.join(siteDisk, siteRelativePath, deployPath),
 	files: ['*.*'],
 	file: {
 		excludeFiles: ['*.html'],

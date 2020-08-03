@@ -1,12 +1,13 @@
 /* eslint-disable no-restricted-globals */
-import userInfo from '../dev/private.json'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import NotFound from './views/NotFound.vue'
+import VueRouter from 'vue-router'
+import { siteRelativePath } from '@/../dev/private.json'
+import Home from '@/views/Home.vue'
+import About from '@/views/About.vue'
+import NotFound from '@/views/NotFound.vue'
 
 export default new VueRouter({
-	base: userInfo.siteRelativePath,
-	mode: history.pushState ? 'history' : 'hash',
+	base: siteRelativePath,
+	mode: 'history',
 	routes: [{
 		path: '/index.aspx',
 		name: 'home',

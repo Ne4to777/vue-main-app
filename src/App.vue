@@ -1,5 +1,5 @@
 <template>
-	<master-app id="app">
+	<master-app>
 		<div id="nav">
 			<router-link to="/index.aspx">Home</router-link>|
 			<router-link to="/about/index.aspx">About</router-link>
@@ -8,33 +8,20 @@
 	</master-app>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-	async created() {
-		return console.log(1)
-	},
-	methods: {
-		a() {
-			console.log(this.b())
-		}
+	created(): void {
+		console.log('1')
+		const delay = 2000
+		setTimeout(() => {
+			console.log(this.$store)
+
+			this.$store.dispatch('master/setSidebarProps', {
+				isVertical: false
+			})
+		}, delay)
 	}
 }
 </script>
-<style lang="stylus" scoped>
-#app
-	font-family 'Avenir', Helvetica, Arial, sans-serif
-	-webkit-font-smoothing antialiased
-	-moz-osx-font-smoothing grayscale
-	text-align center
-	color #2c3e50
 
-#nav
-	padding 30px
-
-	a
-		font-weight bold
-		color #2c3e50
-
-		&.router-link-exact-active
-			color #42b983
-</style>
+<style lang="stylus"></style>
